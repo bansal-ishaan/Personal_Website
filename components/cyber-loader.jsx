@@ -7,6 +7,7 @@ import { Terminal, Zap } from "lucide-react"
 export default function CyberLoader({ onComplete }) {
   const [loadingText, setLoadingText] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   const bootSequence = [
     "INITIALIZING NEURAL NETWORK...",
@@ -16,6 +17,13 @@ export default function CyberLoader({ onComplete }) {
     "ESTABLISHING SECURE CONNECTION...",
     "ISHAAN_OS READY FOR DEPLOYMENT",
   ]
+
+  useEffect(() => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    })
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,8 +47,8 @@ export default function CyberLoader({ onComplete }) {
           <motion.div
             key={i}
             className="absolute text-green-400 font-mono text-sm"
-            initial={{ y: -100, x: Math.random() * window.innerWidth }}
-            animate={{ y: window.innerHeight + 100 }}
+            initial={{ y: -100, x: Math.random() * dimensions.width }}
+            animate={{ y: dimensions.height + 100 }}
             transition={{
               duration: Math.random() * 3 + 2,
               repeat: Number.POSITIVE_INFINITY,
@@ -113,7 +121,5 @@ export default function CyberLoader({ onComplete }) {
           <Zap size={16} />
           <span className="font-mono text-sm">POWERED BY BLOCKCHAIN ENERGY</span>
         </motion.div>
-      </div>
-    </div>
-  )
-}
+        </div>
+        </div>)}
