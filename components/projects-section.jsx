@@ -12,7 +12,7 @@ const projects = [
     description: "SoulBound Token reputation dApp on Polkadot",
     longDescription:
       "Built decentralized SBT-powered reputation lending protocol that verifies newcomers via SoulBound Tokens. Used AI to compute reputation from GitHub data and built Chrome extension for on-platform SBT validation. Integrated with Polkadot AssetHub for minting and deployed job-matching filters with reputation logic.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "./images/RepuFi.jpeg",
     tags: ["Solidity", "Next.js", "Wagmi", "IPFS", "Polkadot"],
     github: "https://github.com/bansal-ishaan/Repu-Fi",
     live: "https://repufi.vercel.app/",
@@ -29,7 +29,7 @@ const projects = [
     description: "AI-powered DeFi platform on Rootstock",
     longDescription:
       "Developed dApp on Rootstock for decentralized portfolio investing and community-curated indexing. Integrated smart contract decks with multi-wallet management and real-time rebalancing UI. Used OpenAI, Gemini, Claude APIs for predictive insights and portfolio summaries.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "./images/FarmingProtocol.jpeg",
     tags: ["Next.js", "Solidity", "Wagmi", "Rootstock", "AI APIs"],
     github: "https://github.com/datmedevil17/Farming-Protocol",
     live: "https://farming-protocol.vercel.app/",
@@ -46,10 +46,10 @@ const projects = [
     description: "Student portal for quizzes, study tools, academic chatbot",
     longDescription:
       "Built a modern web portal where students can find quizzes, study materials, and previous year question papers. Integrated real-time chat for student-to-student interaction and a chatbot for academic assistance. Designed with a focus on ease of access, collaborative learning, and exam preparation tools.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "./images/Quiz.png",
     tags: ["Next.js", "Framer Motion", "SpringBoot", "MySQL"],
     github: "https://github.com/Rohan-droid7341/Web-Vista2.0",
-    live: "https://web-vista2.vercel.app/",
+    live: "https://web-vista2-0.vercel.app/",
     icon: Users,
     color: "from-green-400 to-cyan-500",
     date: "October 2024",
@@ -104,7 +104,7 @@ export default function ProjectsSection() {
                 {/* Project Image */}
                 <div className="relative overflow-hidden h-48">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "./images/RepuFi.jpeg"}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
