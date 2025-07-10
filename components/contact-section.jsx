@@ -105,9 +105,9 @@ export default function ContactSection() {
     },
     {
       icon: Twitter,
-      href: "https://twitter.com/ishaan_bansal",
+      href: "https://twitter.com/b_ishaan_1412",
       label: "X (Twitter)",
-      command: "follow @ishaan_bansal",
+      command: "follow @b_ishaan_1412",
       color: "hover:text-sky-400 hover:shadow-sky-400/25",
     },
     {
